@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/titlelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mmtitle_bg"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/image_btn_press"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/sys_d_navigation_back" />
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="定时短信"
+            android:textColor="#ffffff"
+            android:textSize="18.0sp"
+            android:width="50dip" />
+
+        <ImageButton
+            android:id="@+id/ibtn_savetoDraft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_content_save" />
+    </RelativeLayout>
+    <!-- 添加联系人 -->
+
+    <LinearLayout
+        android:id="@+id/addcontextslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlelayout1"
+        android:background="@drawable/mmtitle_bg"
+        android:orientation="horizontal" >
+
+        <!-- 联系人选择按钮 -->
+        <!-- 联系人输入框 -->
+
+        <EditText
+            android:id="@+id/edit_contexts_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="1"
+            android:background="@drawable/edittext1"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/btn_contexts_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="0"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_social_add_group" />
+    </LinearLayout>
+    <!-- 底部菜单 -->
+
+    <RelativeLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mmtitle_bg" >
+
+        <ImageButton
+            android:id="@+id/insertdiy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/sys_d_content_new" />
+
+        <ImageButton
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/sys_d_social_send_now" />
+
+        <EditText
+            android:id="@+id/edit_body"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/sendbutton"
+            android:layout_toRightOf="@id/insertdiy"
+            android:background="@drawable/edittext1"
+            android:textColor="#000000" />
+    </RelativeLayout>
+    <!-- 收信人列表 -->
+
+    <ListView
+        android:id="@+id/lv_setting"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/addcontextslayout" >
+    </ListView>
+
+    <View
+        android:id="@+id/fenjiexian"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_below="@id/lv_setting"
+        android:background="#888888" />
+
+    <ListView
+        android:id="@+id/receiveusers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/menulayout"
+        android:layout_below="@id/fenjiexian" >
+    </ListView>
+
+</RelativeLayout>

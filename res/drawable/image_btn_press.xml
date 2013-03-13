@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 焦点 -->
+    <item android:state_focused="true"><shape>
+            <gradient android:angle="270" android:endColor="#83B601" android:startColor="#B0F701" />
+
+            <stroke android:width="1dip" android:color="#3EBC1C" />
+
+            <corners android:radius="5dip" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+
+            <shape></shape>
+        </shape></item>
+
+    <!-- 按下 -->
+    <item android:state_pressed="true"><shape>
+            <gradient android:angle="270" android:endColor="#83B601" android:startColor="#B0F701" />
+
+            <stroke android:width="1dip" android:color="#3EBC1C" />
+
+            <corners android:radius="5dip" />
+
+            <padding android:bottom="10dp" android:left="10dp" android:right="10dp" android:top="10dp" />
+        </shape></item>
+    <!-- 正常 -->
+    <item android:drawable="@android:color/transparent"></item>
+
+</selector>

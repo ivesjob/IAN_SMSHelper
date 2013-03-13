@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/titlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mmtitle_bg"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="5dip"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_navigation_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="设置自动回复"
+            android:textColor="#ffffff"
+            android:textSize="18.0sp" />
+
+        <ImageButton
+            android:id="@+id/savebutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_content_save" />
+    </RelativeLayout>
+    <!-- 内容 -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/titlelayout" >
+
+        <TextView
+            android:id="@+id/title_reply_contant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="#888888"
+            android:text="回复内容" />
+
+        <RelativeLayout
+            android:id="@+id/contantlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_reply_contant" >
+
+            <ImageButton
+                android:id="@+id/btn_input_shrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="5dip"
+                android:layout_marginLeft="5dip"
+                android:layout_marginTop="5dip"
+                android:src="@drawable/sys_d_content_new" />
+
+            <EditText
+                android:id="@+id/et_sendmessage"
+                android:layout_width="wrap_content"
+                android:layout_height="45dip"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_input_shrase"
+                android:background="@drawable/edittext1"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_addpersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/contantlayout"
+            android:layout_marginTop="5dip"
+            android:background="#888888"
+            android:text="回复范围" />
+
+        <LinearLayout
+            android:id="@+id/reply_scope"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title_addpersion"
+            android:orientation="vertical" >
+
+            <CheckBox
+                android:id="@+id/cb_isIncludeStranger"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对陌生人生效" />
+
+            <CheckBox
+                android:id="@+id/cb_isAllContacts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="对所有联系人生效" />
+
+            <CheckBox
+                android:id="@+id/cb_isNoAnswerCall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未接来电" />
+
+            <CheckBox
+                android:id="@+id/cb_isAcceptSMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收到短信" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/spechalset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reply_scope"
+            android:layout_marginTop="5dip"
+            android:background="#888888"
+            android:text="特殊设置" />
+
+        <RelativeLayout
+            android:id="@+id/layout_spechalset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spechalset"
+            android:visibility="gone" >
+
+            <ListView
+                android:id="@+id/spechalList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" >
+            </ListView>
+
+            <View
+                android:id="@+id/fengexian"
+                android:layout_width="match_parent"
+                android:layout_height="3dip"
+                android:layout_below="@id/spechalList"
+                android:background="#888888" />
+
+            <ListView
+                android:id="@+id/lv_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fengexian" >
+            </ListView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

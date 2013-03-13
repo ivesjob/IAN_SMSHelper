@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff" >
+
+    <!-- 标题 -->
+
+    <RelativeLayout
+        android:id="@+id/titlelayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/mmtitle_bg"
+        android:gravity="center_vertical" >
+
+        <ImageButton
+            android:id="@+id/ibtn_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/image_btn_press"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/sys_d_navigation_back" />
+
+        <TextView
+            android:layout_width="100dip"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="短信发送"
+            android:textColor="#ffffff"
+            android:textSize="18.0sp"
+            android:width="50dip" />
+
+        <ImageButton
+            android:id="@+id/ibtn_savetoDraft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="1dip"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_content_save" />
+    </RelativeLayout>
+    <!-- 添加联系人 -->
+
+    <LinearLayout
+        android:id="@+id/addcontextslayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titlelayout1"
+        android:background="@drawable/mmtitle_bg"
+        android:orientation="horizontal" >
+
+        <!-- 联系人选择按钮 -->
+        <!-- 联系人输入框 -->
+
+        <EditText
+            android:id="@+id/edit_contexts_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="1"
+            android:background="@drawable/edittext1"
+            android:textColor="#000000" />
+
+        <ImageButton
+            android:id="@+id/btn_contexts_add"
+            android:layout_width="wrap_content"
+            android:layout_height="45dip"
+            android:layout_weight="0"
+            android:background="@drawable/image_btn_press"
+            android:src="@drawable/sys_d_social_add_group" />
+    </LinearLayout>
+    <!-- 底部菜单 -->
+
+    <RelativeLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/mmtitle_bg" >
+
+        <ImageButton
+            android:id="@+id/insertdiy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/sys_d_content_new" />
+
+        <ImageButton
+            android:id="@+id/sendbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/sys_d_social_send_now" />
+
+        <EditText
+            android:id="@+id/edit_body"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/sendbutton"
+            android:layout_toRightOf="@id/insertdiy"
+            android:background="@drawable/edittext1"
+            android:textColor="#000000" />
+    </RelativeLayout>
+    <!-- 收信人列表 -->
+	<ProgressBar android:id="@+id/group_send_progress"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	      style="?android:attr/progressBarStyleHorizontal"
+	      android:layout_above="@id/menulayout"
+	      android:layout_marginLeft="3dip"
+	      android:layout_marginRight="3dip"
+	      android:max="100"
+	      android:secondaryProgress="100"
+	      android:visibility="gone"
+	    />
+    <ListView
+        android:id="@+id/receiveusers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/group_send_progress"
+        android:layout_below="@id/addcontextslayout" >
+    </ListView>
+
+</RelativeLayout>

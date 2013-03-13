@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">IAN_SMSHelper</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="message">信息</string>
+    <string name="fsend">群发</string>
+    <string name="reply">回复</string>
+    <string name="timing">定时</string>
+    <string name="more">更多</string>
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+
+    <item name="tag_first" type="id"></item>
+    <item name="tag_second" type="id"></item>
+
+    <string name="sms_speak_string_format">Message from "%1$s": %2$s</string>
+    <string name="dismiss">Dismiss</string>
+
+     <string name="dateSliderTitle">Selected date</string>
+</resources>
